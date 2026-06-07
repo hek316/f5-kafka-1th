@@ -27,7 +27,7 @@ sequenceDiagram
     autonumber
     actor R as "결재 요청자"
     actor A as "결재권자"
-    participant APP as "Compline S 결재/조치 서비스"
+    participant APP as "결재/조치 관리 서비스"
     participant DB as "Approval / Action DB"
     participant EVT as "Spring Application Events"
     participant POST as "AfterApprovalProcessor"
@@ -72,7 +72,7 @@ sequenceDiagram
 ### 등장하는 사용자/시스템/외부 연동
 
 - 사용자: 결재 요청자, 결재권자
-- 내부 시스템: Compline S 결재 제출/처리 서비스, Approval / Action DB, Spring application event 레이어, 결재 완료 후처리 모듈, 알림 메시지 저장 및 발송 모듈
+- 내부 시스템: 결재 제출/처리 서비스, Approval / Action DB, Spring application event 레이어, 결재 완료 후처리 모듈, 알림 메시지 저장 및 발송 모듈
 - 외부 연동: 메일 서버, 메신저 채널
 
 ### 요청과 데이터 흐름
